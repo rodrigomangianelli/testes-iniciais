@@ -1,0 +1,185 @@
+/* formatações genéricas */
+/* resetar margens */
+* { 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* criar variável para utilizar determinada propriedade em vários elementos, chamando a var() */
+:root {
+    --cor-azul:rgb(5, 5, 141);
+        
+    /* fim de formatações genéricas */
+    }
+
+
+/* titulo diferente gulliver */
+
+
+/* início do cabeçalho */
+.titulo-diferente {
+
+    color:var(--cor-azul); 
+
+    font-family:'Franklin Gothic Medium';
+
+}
+
+.cabecalho {
+    /* display flex permite o elemento ficar ao lado do outro */
+    width: 100%;
+    display: flex;
+    background-color:rgba(231, 225, 217, 0.527);
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    /* o menu ficará "na frente da imagem com position absolute" */
+    position: relative;
+   
+}   
+
+.cabecalho h1 {
+font-size: 80px;
+
+}
+    /* início de formatações do menu */
+
+
+.menu ul {
+        display:flex;
+        /* list style são as bolinhas */
+        list-style: none;
+               
+    }
+
+.menu li {
+    margin-left: 20px;
+    font-size:larger; 
+    font-family: Georgia;
+        
+}
+
+.menu a {
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--cor-azul);
+    font-weight: 800;
+    
+    }
+
+.menu a:hover {
+    
+    color: rgb(45, 45, 145);
+    transition: 1s;
+    font-size: 50px;
+    
+    }
+/* fim de formatações do menu */
+
+
+
+.hero {
+
+    min-height: 100vh;
+    background-image: url(./IMAGENS/Home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}   
+
+.hero h2 {
+
+    font-size: 10vmin;
+    color: rgb(37, 34, 34);
+    /* margin: 60px 0; */
+    margin-top: 250px;
+
+}
+
+/* titulo diferente "pelo mundo" */
+.titulo-diferente-h2{
+
+    color: var(--cor-azul);
+    background-color:rgba(255, 228, 196, 0.827);
+    }
+
+
+ 
+
+/* .hero a => decidi tirar o botão "hero"
+    
+    font-size: 4vmin;
+    border: 1px;
+    border-style: solid;    
+    border-radius: 2px;
+    padding: 15px;
+    background-color: rgba(255, 228, 196, 0.527);
+    text-decoration: none;
+    color: black; */
+    
+    
+
+
+/* início da seção promoções */
+.promocoes {
+    background-color:rgba(231, 225, 217, 0.527);
+    /* width: 90%; */
+    /* margin:20px auto; */
+    min-height: 100vh; 
+    padding: 20px;
+    /* border: 2px solid; */ 
+    
+}   
+
+.promocoes h2 {
+    
+    text-align: center;
+    margin: 20px;
+    font-size: 7vmin;
+    
+}
+
+.itens-promocoes {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap:wrap;
+    
+}
+
+
+.itens-promocoes div {
+    border: 2px solid;
+    width: 30%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}   
+
+.itens-promocoes-img1 {background-image:url(./IMAGENS/1.png);}  
+.itens-promocoes-img2 {background-image:url(./IMAGENS/2.png);}  
+.itens-promocoes-img3 {background-image:url(./IMAGENS/3.png);} 
+.itens-promocoes-img4 {background-image:url(./IMAGENS/4.png);} 
+.itens-promocoes-img5 {background-image:url(./IMAGENS/5.png);} 
+.itens-promocoes-img6 {background-image:url(./IMAGENS/6.png);} 
+
+
+ /* Pensando no responsivo */
+
+@media(max-width: 1020px){
+
+    .itens-promocoes div{
+        width:80%;
+    }
+}
